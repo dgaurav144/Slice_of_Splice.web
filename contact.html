@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+   
+    <link rel="stylesheet" href="./contact.css">
+    <title>Contact</title>
+   
+</head>
+<body>
+    
+    
+    <!-- main start -->
+  <main id="main">
+    <nav id ="nav" >
+        <i class="fa-solid fa-bars" id="btn"></i>
+        <i class="fa-solid fa-xmark" id="btn2"></i>
+        <ul id ="list">
+        <li><a href="./index.html"> Home</a></li>
+        <li><a href="./about.html">Gallery</a></li>
+        <li><a href="./contact.html"  class="active">Contact</a></li>
+        <li><a href="./services.html">Services</a></li>
+        </ul>
+    </nav>
+    <div class="heading-div">
+        <div>
+        <h1>Contact <i class="fa-solid fa-phone fa-shake"></i></h1>
+        </div>
+        
+    </div>
+    <div class="first_main">
+        <div class="inner_first">
+            <img src="./img/contact.jpg" alt="" height="80%" width="70%" class="img">
+        </div>
+        <div class="inner2_first">
+            <h1 style="color: #fff; font-size:33px">Find us</h1>
+            <div class="address">
+                <p><b>Address</b> </p>
+                <p>500 Terry Francine Street
+                    San Francisco, CA 94158</p>
+            </div>
+            <div class="address">
+                <p><b>Opening</b></p>
+                <p>Mon - Fri: 8am - 8pm
+                    ​​Saturday: 9am - 7pm  ​Sunday: 9am - 8pm
+                     </p>
+
+            </div>
+            <div class="address">
+                <p><b>Phone</b></p>
+                <p> &nbsp; &nbsp;85805-13675</p>
+            </div>
+            <div class="address">
+                <p><b>Email</b></p>
+                <p>&nbsp;&nbsp;dgaurav144@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+        <div class="second_main">
+            <h1 style="color: #fff; padding: 50px">Get in Touch</h1>
+            <div class="inner_second">
+        <form action="">
+            <label for="">First name*</label><br>
+            <input type="text" id="input">
+
+            
+           
+        </form>
+        <form action="">
+            <label for="">Last name*</label><br>
+            <input type="text" id="input">
+
+            
+           
+        </form>
+        <form action="">
+            <label for="">Email*</label><br>
+            <input type="text" id="input">
+
+            
+           
+        </form>
+        <form action="">
+            <label for="">Phone*</label><br>
+            <input type="text" id="input">
+
+            
+           
+        </form>
+        <form action="">
+            <label for="">Select Date*</label><br>
+            <input type="date" name="" id="input">
+
+            
+           
+        </form>
+        <form action="">
+            <label for="">Time*</label><br><br>
+            <input type="time" id="input">
+
+            
+           
+        </form>
+        <form action="">
+            <label for="">Write a message*</label><br>
+            <textarea name="" id="area" cols="30" rows="10"></textarea>            
+           
+        </form>
+     
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+
+
+    <div class="eight_main">
+        <div class="inner_eight">
+            <img src="./img/wired-gradient-1512-mom-feeding-baby.gif" alt="" height="150px">
+            <h1 style="color: #fff  ;">Slice of Spice</h1>
+        </div>
+        <div class="inner2_eight">
+            <h1 style="color: #fff; width:80% ">Subscribe to our newsletter for updates and special deals.</h1>
+            <form  action="">
+                <label for="" style="color: #fff  ; font-size:17px">Email*</label>
+                <input type="email" name="" id="email">
+                <button class="button3">SUBMIT</button>
+            </form>
+        </div>
+        <div class="inner3_eight">
+            <form action="">
+            <label class="ids" for="">Facebook</label>
+            <label class="ids" for="">Gmail</label>
+            <label class="ids" for="">Instagram</label>
+            </form>
+            <div>
+            <p style="color: #fff;">500 Terry Francine Street,</p>
+            <p style="color: #fff;">Gaurav Dhiman</p>
+            <p style="color: #fff;">8580513675</p>
+            <p style="color: #fff;">dgaurav144@gmail.com</p></div>
+        </div>
+        <div class="last_div">
+            <p style="color: #fff;">© 2023 . Powered and secured by Gauarv</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    </main>
+    <script>
+        var btn = document.getElementById("btn");
+        var btn2 = document.getElementById("btn2");
+        var nav = document.getElementById("nav");
+        var list = document.getElementById("list");
+        var loader = document.getElementById("loader");
+        var main = document.getElementById("main");
+        btn.addEventListener("click", ()=>{
+            list.style.display = "flex"
+            btn.style.display = "none"
+            btn2.style.display="block"  
+            nav.classList.toggle("cng")
+        
+        })
+        btn2.addEventListener("click",()=>{
+            btn2.style.display = ("none")
+            btn.style.display = "block"
+            list.style.display=("none")
+            nav.classList.toggle("cng")
+           
+        })
+
+
+        ScrollReveal({ reset: true });
+        ScrollReveal().reveal('.heading-div',{
+            delay
+                : 200
+        });
+        ScrollReveal().reveal('.second_main', {
+            delay
+                : 300
+        });
+        ScrollReveal().reveal('.img', {
+            delay
+                : 300
+        });
+        ScrollReveal().reveal('.inner2_first', {
+            delay
+                : 200
+        });
+    </script>
+</body>
+</html>

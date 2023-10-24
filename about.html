@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="about.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>About</title>
+
+   
+</head>
+<body>
+
+    <div id="form" class="log_in">
+        <form id="form1"action="">
+            <label for="name">Enter your name</label>
+            <input class="local" type="text" name="name" id="name">
+            <lable for="email">Enter your email</lable>
+            <input class="local" type="email" name="email" id="email">
+            <button id= "submit" type="button">Submit</button>
+           
+        </form>
+       
+    </div>
+    
+ 
+  
+    <nav id ="nav" >
+        <i class="fa-solid fa-bars" id="btn"></i>
+        <i class="fa-solid fa-xmark" id="btn2"></i>
+        <ul id ="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.css"  class="active">Gallery</a></li>
+        <li><a href="contact.html" >Contact</a></li>
+        <li><a href="services.html" >Services</a></li>
+        </ul>
+    </nav>
+
+
+    <main id="main">
+
+    <div class="heading">
+        <h1 id="head"></h1>
+        <h1 class="pehla">Welcome to Our Gallery</h1>
+
+    </div>
+    <div class="counter">
+        <h1 style="padding: 40px 0px">Our Followers</h1>
+        <div class="media">
+        <div>Instagram</div>
+        <div>Facebook</div>
+        <div>Twitter</div>
+        </div>
+        <div class="followers">
+            <div id="insta">0</div>
+            <div id="fb">0</div>
+            <div id="twitter">0</div>
+        </div>
+    </div>
+<!-- img slider -->
+      <div class="slider">
+        <img id="img" src="" alt="">
+        <div class="buttons">
+            <button type="button"  id="previous">&lang;</button>
+            <button type="button" id="next">&rang; </button>
+          </div>
+      </div>
+     
+      <div class="y">
+        <h1 style="text-align:center">Touch to images to view</h1>
+      </div>
+      <div class="gallery">
+      
+        <img src="./img/gallery1.jpg " height="200px" width="300px" alt="">
+        <img src="./img/gallery2.jpg " height="500px" width="300px" alt="">
+        <img src="./img/gallery3.jpg " height="200px" width="300px" alt="">
+        <img src="./img/gallery5.jpg " height="200px" width="300px" alt="">
+        <img src="./img/gallery4.jpg " height="200px" width="300px" alt="">
+      </div>
+
+
+
+
+    
+
+
+    <div class="move">
+        <div class="inner">
+            <h1>Indulging in flavors that make life delicious.
+            </h1>
+        <marquee scrollamount="18" behavior="alternate" direction="left" >
+            <img class="rotate" src="./img/png3" alt="" height="200px" width="200px"> </marquee>
+        <marquee  behavior="alternate" direction="right"  scrollamount="18">
+        <img class="rotate" src="./img/burger.png" alt="" height="200px" width="200px"></marquee>
+        <marquee  behavior="alternate" direction="left"  scrollamount="18">
+        <img class="flip" src="./img/buger.jpg" alt="" height="200px" width="200px"></marquee>
+
+        <marquee  behavior="alternate" direction="right"  scrollamount="18">
+        <img class="flip" src="./img/cake.jpg" alt=""height="200px" width="200px"></marquee>
+        </div>
+    </div>
+    
+
+       <!-- footer -->
+
+       <div class="eight_main">
+        <div class="inner_eight">
+            <img src="./img/wired-gradient-1512-mom-feeding-baby.gif" alt="" height="150px">
+            <h1 style="color: #fff  ;">Slice of Spice</h1>
+        </div>
+        <div class="inner2_eight">
+            <h1 style="color: #fff; width:80% ">Subscribe to our newsletter for updates and special deals.</h1>
+            <form  action="">
+                <label for="" style="color: #fff  ; font-size:17px">Email*</label>
+                <input type="email" name="" id="emaill">
+                <button class="button3">SUBMIT</button>
+            </form>
+        </div>
+        <div class="inner3_eight">
+            <form action="">
+            <label class="ids" for="">Facebook</label>
+            <label class="ids" for="">Gmail</label>
+            <label class="ids" for="">Instagram</label>
+            </form>
+            <div>
+            <p style="color: #fff;">500 Terry Francine Street,</p>
+            <p style="color: #fff;">Gaurav Dhiman</p>
+            <p style="color: #fff;">8580513675</p>
+            <p style="color: #fff;">dgaurav144@gmail.com</p></div>
+        </div>
+        <div class="last_div">
+            <button id="logout" type="button">Logout</button>
+            <p style="color: #fff;">© 2023 . Powered and secured by Gauarv</p>
+           
+        </div>
+
+    </div>
+
+
+
+
+    </main>
+    <script>
+       
+        var btn = document.getElementById("btn");
+        var btn2 = document.getElementById("btn2");
+        var nav = document.getElementById("nav");
+        var list = document.getElementById("list");
+        var img = document.getElementById("img");
+        var previous = document.getElementById("previous");
+        var next = document.getElementById("next");
+        var main= document.getElementById("main");
+        
+
+        var images=["./img/img1.jpg",
+        "./img/slider2.jpg",
+        "./img/slider3.jpg",
+        "./img/slider4.jpg",
+        "./img/img2.jpg"
+        ]
+        currentIndex = 0;
+        function slider(){
+            img.style.filter="blur(3px)";
+            img.src = images[currentIndex];
+           
+            setTimeout(()=>{
+                img.style.filter= "blur(0px)"
+                
+    
+            },500)
+        }
+        slider();
+
+
+        next.addEventListener("click",()=>{
+           
+            currentIndex= currentIndex+1;
+           
+            slider();
+            if(currentIndex==4){
+            currentIndex= 0;
+           
+            slider()
+            }
+        })
+        previous.addEventListener("click", ()=>{
+            currentIndex= currentIndex-1;
+          
+            slider();
+            if(currentIndex== -1){
+                currentIndex=  currentIndex+4;
+                slider();
+                
+                
+            }
+        })
+      
+
+       
+        btn.addEventListener("click", ()=>{
+            list.style.display = "flex"
+            btn.style.display = "none"
+            btn2.style.display="block"  
+            nav.classList.toggle("cng") 
+            
+          
+            
+        })
+        btn2.addEventListener("click",()=>{
+            btn2.style.display = ("none")
+            btn.style.display = "block"
+            list.style.display=("none")
+            nav.classList.toggle("cng")
+           
+        });
+        
+
+
+
+
+
+            var userName = document.getElementById("name");
+            var userEmail = document.getElementById("email");
+            var form = document.getElementById("form");
+            var submit= document.getElementById("submit");
+            var logout= document.getElementById("logout");
+            logout.style.display = "none";
+            var storedName =  localStorage.name;
+            if(storedName){
+                document.getElementById("head").innerHTML= `Hello ${storedName}`;
+                form.style.display = "none";
+                logout.style.display= "block";
+                main.style.display= "block"
+
+            } 
+            else{
+                alert("Please Enter your Name & Email to Explore the Gallery ")
+
+            }
+            logout.addEventListener("click",()=>{
+                localStorage.clear();
+                location.reload();
+                confirm("You want to logout?")
+            })
+            submit.addEventListener("click" , ()=>{
+                if(userName.value == "" || userEmail.value == ""){
+                    alert("Please your Name & Email")
+
+                }
+                else{
+                    localStorage.setItem("name" , userName.value);
+                    location.reload();
+                    userEmail.value= "";
+                    userName.value= "";
+                    
+
+                }
+            });
+             function countUp(){
+                var insta = document.getElementById("insta");
+                var fb = document.getElementById("fb");
+                var twitter = document.getElementById("twitter");
+                var count = 0;
+                var fbcount=0;
+                var twittercount=10;
+               var interwalSet = setInterval(()=>{
+                count++;
+                count <= 99 ? insta.innerHTML = `${count} K+`  : clearInterval(interwalSet)
+
+               },30)
+               var interwalSet = setInterval(()=>{
+                fbcount++;
+                fbcount <= 69 ? fb.innerHTML = `${fbcount} K+`  : clearInterval(interwalSet)
+
+               },30)
+               var interwalSet = setInterval(()=>{
+                twittercount++;
+                twittercount <= 79 ? twitter.innerHTML = `${twittercount} K+`  : clearInterval(interwalSet)
+
+               },30)
+             }
+             countUp();
+
+             ScrollReveal({ reset: true });
+             ScrollReveal().reveal('.pehla', {
+                 delay
+                     : 200
+             });
+             ScrollReveal().reveal('.counter', {
+                delay
+                    : 300
+            });
+            ScrollReveal().reveal('#img', {
+                delay
+                    : 200
+            });
+            ScrollReveal().reveal('.rotate', {
+                delay
+                    : 200
+            });
+            ScrollReveal().reveal('.flip', {
+                delay
+                    : 200
+            });
+        
+    </script>
+</body>
+</html>
